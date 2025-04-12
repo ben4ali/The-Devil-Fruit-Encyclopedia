@@ -1,0 +1,164 @@
+.header-info{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+.header-info h3, .header-info h4, .header-info h5{
+    margin: 0;
+    padding: 0;
+}
+
+.image-holder {
+    position: relative;
+    width: 50%;
+
+    aspect-ratio: 1 / 1;
+}
+
+.image-holder img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.devil-fruit-image{
+    opacity: 0.8;
+    filter: sepia(1) saturate(0.6) hue-rotate(-20deg) brightness(0.9) contrast(1.2);
+}
+
+.border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+    filter: invert(0.5) sepia(20) hue-rotate(-25deg) brightness(0.8);
+}
+
+.devil-fruit-info{
+    gap: 0.15rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.devil-fruit-info h3{
+    font-size: 1.15rem;
+}
+
+.name-holder h3{
+    font-family: "Gallaecia Forte";
+    font-size: 0.75rem;
+}
+
+.debut-info{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.debut-info h5{
+    font-size: 0.5rem;
+}
+
+
+.type-holder{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+
+}
+
+.type-image{
+    position: relative !important;
+    width: 20% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+    filter: invert(0.5) sepia(20) hue-rotate(-25deg) brightness(0.7) !important;
+}
+
+.devil-fruit-type{
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    width: 90%;
+    margin: 0;
+}
+
+.holder-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(0,0,0,0.07);
+    padding: 0.4rem;
+}
+.holder-container h4{
+    font-family: "Gallaecia Forte";
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2rem;
+}
+.past-holder{
+    text-decoration:underline;
+    text-underline-offset: -40%;
+    text-decoration-skip-ink: none;
+    text-decoration-color: rgb(0,0,0,0.5);
+    text-decoration-thickness: 0.1rem;
+    font-size: 0.65rem;
+
+}
+
+.description-info h3, .description-info h4, .description-info h5, .description-info p{
+    margin: 0;
+    padding: 0;
+}
+
+.description-info{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    font-family: "Thin pixel";
+}
+
+.desc-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.description-info h3{
+    font-size: 3rem;
+    line-height: 0.5rem;
+}
+
+.description-info h5{
+    font-size: 2.6rem;
+    line-height: 0.5rem;
+}
+
+.description-info p{
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.awakening{
+    border-top: 2px solid rgb(0,0,0,0.1);
+    padding-top: 1rem;
+}
