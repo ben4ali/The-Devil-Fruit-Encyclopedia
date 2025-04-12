@@ -1,9 +1,31 @@
+.left-page, .right-page {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color:rgb(145, 95, 49);
+    top: -2%;
+}
+
+.left-page {
+    /* background-color: blue; */
+    transform: skewY(-1.25deg);
+}
+
+.right-page {
+    /* background-color: red; */
+    transform: skewY(0.5deg);
+}
+
+
 .header-info{
-    padding: 1rem;
+    padding: 1vw;
     display: flex;
     justify-content: space-between;
-
-    gap: 1rem;
+    gap: 1vw;
 }
 
 .header-info h3, .header-info h4, .header-info h5{
@@ -13,7 +35,7 @@
 
 .image-holder {
     position: relative;
-    width: 50%;
+    width: 45%;
 
     aspect-ratio: 1 / 1;
 }
@@ -42,7 +64,7 @@
 }
 
 .devil-fruit-info{
-    gap: 0.15rem;
+    gap: 0.3vw;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -56,12 +78,12 @@
 }
 
 .devil-fruit-info h3{
-    font-size: 1.15rem;
+    font-size: 1.2vw
 }
 
 .name-holder h3{
     font-family: "Gallaecia Forte";
-    font-size: 0.75rem;
+    font-size: 0.6vw
 }
 
 .debut-info{
@@ -71,7 +93,7 @@
 }
 
 .debut-info h5{
-    font-size: 0.5rem;
+    font-size: 0.5vw;
 }
 
 
@@ -79,7 +101,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 2rem;
+    height: 2vw;
     align-items: center;
 
 }
@@ -96,7 +118,7 @@
 .devil-fruit-type{
     display: flex;
     align-items: center;
-    font-size: 0.85rem;
+    font-size: 0.85vw;
     width: 90%;
     margin: 0;
 }
@@ -106,24 +128,22 @@
     flex-direction: column;
     width: 100%;
     background-color: rgb(0,0,0,0.07);
-    padding: 0.4rem;
+    padding: 0.4vw;
 }
 .holder-container h4{
     font-family: "Gallaecia Forte";
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 1.25vh;
     margin: 0;
     padding: 0;
-    line-height: 1.2rem;
+    line-height: 2vh;
 }
 .past-holder{
     text-decoration:underline;
     text-underline-offset: -40%;
     text-decoration-skip-ink: none;
     text-decoration-color: rgb(0,0,0,0.5);
-    text-decoration-thickness: 0.1rem;
-    font-size: 0.65rem;
-
+    text-decoration-thickness: 0.1vw;
 }
 
 .description-info h3, .description-info h4, .description-info h5, .description-info p{
@@ -134,31 +154,27 @@
 .description-info{
     display: flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap:1.3vw;
     font-family: "Thin pixel";
 }
 
 .desc-group{
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-}
-.description-info h3{
-    font-size: 3rem;
-    line-height: 0.5rem;
+    gap: 0.8vw;
 }
 
 .description-info h5{
-    font-size: 2.6rem;
-    line-height: 0.5rem;
+    font-size: 2.3vw;
+    line-height: 0.02vw;
 }
 
 .description-info p{
-    font-size: 1.5rem;
-    line-height: 1rem;
+    font-size: 1.5vw;
+    line-height: 1vw;
 }
 
 .awakening{
-    border-top: 2px solid rgb(0,0,0,0.1);
-    padding-top: 1rem;
+    border-top: 0.2vw solid rgb(0,0,0,0.1);
+    padding-top: 1vw;
 }

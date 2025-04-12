@@ -3,8 +3,8 @@
     top: 43%;
     left: 51%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 120%;
+    width: 130%;
+    height: 130%;
 }
 
 .book img {
@@ -25,37 +25,18 @@
 
 .book-content-holder {
     position: absolute;
-    top: 53%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 44vw;
-    height: 28vw;
+    width: 68%;
+    height: 46%;
+    /* background-color: rgba(255, 0, 0, 0.185); */
     overflow: hidden;
     z-index: 2;
     display: none;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10%;
     align-items: center;
-    padding-inline: 5%;
-}
-
-.left-page, .right-page {
-    width: 45%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color:rgb(145, 95, 49)
-}
-
-.left-page {
-    /* background-color: blue; */
-    transform: skewY(-1.25deg);
-}
-
-.right-page {
-    /* background-color: red; */
-    transform: skewY(0.5deg);
 }
 
 .book-controller {
@@ -69,19 +50,48 @@
     top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 1vw;
 }
 
 .book-controller button {
-    width: 100px;
-    height: 50px;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
     background-color: #b66f46;
     border: none;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease;
-    margin: 0 5px;
+    margin: 0;
 }
 
 .book-controller button:hover {
     background-color: #441b1b;
+}
+
+
+@media (max-width: 1080px) {
+    .book {
+        width: 90%;
+        height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .book img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .book-content-holder {
+        width: 80%;
+        height: 60%;
+    }
+
+    .book-controller button {
+        width: 20vw;
+        height: 5vw;
+        font-size: 2vw;
+    }
 }
