@@ -12,6 +12,47 @@
     height: 100%;
     object-fit: contain;
     pointer-events: none;
+    position: absolute;
+}
+
+.book-ref {
+    z-index: 1;
+}
+
+.content-ref {
+    z-index: 3;
+}
+
+.book-content-holder {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44vw;
+    height: 28vw;
+    overflow: hidden;
+    z-index: 2;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5%;
+}
+
+.left-page, .right-page {
+    width: 43%;
+    height: 94%;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-page {
+    background-color: blue;
+    transform: skewY(-1deg);
+}
+
+.right-page {
+    background-color: red;
+    transform: skewY(1deg);
 }
 
 .book-controller {

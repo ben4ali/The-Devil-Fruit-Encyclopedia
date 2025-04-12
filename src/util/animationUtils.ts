@@ -9,7 +9,7 @@ export function animateFrameByFrame(
   let frameIndex = 0;
 
   const frames: string[] = [];
-  const maxFrames = 8;
+  const maxFrames = 35;
 
   let i = 1;
   while (i <= maxFrames) {
@@ -36,7 +36,7 @@ export function animateFrameByFrame(
       frameIndex++;
     } else {
       clearInterval(animationInterval);
-      imgElement.src = `${finalImagePath}`;
+      imgElement.src = finalImagePath;
     }
   }, interval);
 }
