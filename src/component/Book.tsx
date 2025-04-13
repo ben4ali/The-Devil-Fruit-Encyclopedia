@@ -9,6 +9,7 @@ import {
 import { Page } from "./Page";
 import { useDevilFruits } from "../hook/useDevilFruits";
 import book_close from "../assets/image/book_close.png";
+import button from "../assets/image/button.png";
 import "../style/style-book.css";
 import gsap from "gsap";
 
@@ -16,6 +17,11 @@ export const BookComponent = () => {
   const bookRef = useRef<HTMLImageElement>(null);
   const contentRef = useRef<HTMLImageElement>(null);
   const bookContent = useRef<HTMLDivElement>(null);
+
+  const nextBtnRef = useRef<HTMLButtonElement>(null);
+  const previousBtnRef = useRef<HTMLButtonElement>(null);
+  const openBtnRef = useRef<HTMLDivElement>(null);
+  const closeBtnRef = useRef<HTMLDivElement>(null);
 
   const debounceTimeout = 1800;
   const [isOpen, setIsOpen] = useState(false);
@@ -113,11 +119,19 @@ export const BookComponent = () => {
     setOpen(true);
     setDebounce(true);
     openBook(bookRef.current!);
+
+    openBtnRef.current?.classList.add("disabled");
+    closeBtnRef.current?.classList.remove("disabled");
     gsap.to(contentRef.current, {
       duration: 0.5,
       opacity: 1,
       ease: "power2.out",
       delay: 0.8,
+      onComplete: () => {
+
+        nextBtnRef.current?.classList.remove("disabled");
+        previousBtnRef.current?.classList.remove("disabled");
+      }
     });
     appearBookContent();
   };
@@ -127,6 +141,11 @@ export const BookComponent = () => {
     setDebounce(true);
     setOpen(false);
     closeBookContent();
+    openBtnRef.current?.classList.remove("disabled");
+
+    closeBtnRef.current?.classList.add("disabled");
+    nextBtnRef.current?.classList.add("disabled");
+    previousBtnRef.current?.classList.add("disabled");
   };
 
   const handleFlipRight = () => {
@@ -157,10 +176,19 @@ export const BookComponent = () => {
       <img className="content-ref" ref={contentRef} src="" alt="content" />
 
       <div className="book-controller">
-        <button onClick={handleOpen}>Open</button>
-        <button onClick={handleClose}>Close</button>
-        <button onClick={handleFlipRight}>Previous</button>
-        <button onClick={handleFlipLeft}>Next</button>
+        <div ref={openBtnRef} className="btn-frame">
+            <button className="open-btn" onClick={handleOpen}>OPEN</button>
+            <img src={button} alt="button" className="btn-frame-image" />
+        </div>
+
+        <div ref={closeBtnRef} className="btn-frame disabled">
+          <button className="close-btn " onClick={handleClose}>CLOSE</button>
+            <img src={button} alt="button" className="btn-frame-image" />
+        </div>
+        
+        
+        <button ref={previousBtnRef} className="previous-btn disabled" onClick={handleFlipRight}></button>
+        <button ref={nextBtnRef} className="next-btn disabled" onClick={handleFlipLeft}></button>
       </div>
     </div>
   );

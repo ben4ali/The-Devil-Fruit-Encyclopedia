@@ -54,8 +54,8 @@ export const Page: FC<PageProps> = ({ side, devilFruit }) => {
                         ))}
                     </div>
                     <div className="debut-info">
-                        <h5 className="debut-chapter">{devilFruit?.debutChapter}</h5>
-                        <h5 className="debut-episode">{devilFruit?.debutEpisode}</h5>
+                        <h5 className="debut-chapter">CH. {devilFruit?.debutChapter}</h5>
+                        <h5 className="debut-episode">EP. {devilFruit?.debutEpisode}</h5>
                         <h5 className="debut-arc">{devilFruit?.debutArc}</h5>
                     </div>
                 </div>
