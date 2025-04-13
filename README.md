@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# The Devil Fruit Encyclopedia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Devil Fruit Encyclopedia is a pixel-styled web application that serves as a comprehensive guide to the Devil Fruits from the One Piece universe. The app features a unique interactive book interface, allowing users to flip through pages and explore detailed information about each Devil Fruit.
 
-Currently, two official plugins are available:
+## Features
+- **Pixel Art Style**: The app embraces a pixel art aesthetic for a nostalgic and visually appealing experience.
+- **Interactive Book**: Flip through pages of the encyclopedia with smooth animations.
+- **API Integration**: The app fetches Devil Fruit data from a custom API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Previews
+Here are some previews of the application:
 
-## Expanding the ESLint configuration
+### Screenshots
+![Preview 1](previews/preview1.png)
+![Preview 2](previews/preview2.png)
+![Preview 3](previews/preview3.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Animations
+![Preview 4](previews/preview4.gif)
+![Preview 5](previews/preview5.gif)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React**
+- **GSAP**
+- **Vite**
+- **TypeScript**
+- **Axios**
+- **React query**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## API
+This application uses a custom API that I developed with Springboot to provide data about Devil Fruits. You can find the API repository here: [The Devil Fruit Encyclopedia API](https://github.com/ben4ali/The-Devil-Fruit-Encyclopedia-API).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Art and Assets
+- **Devil Fruits Art**: All Devil Fruit art assets were created by **ben4ali**.
+- **Book Asset**: The book asset was created by **HumblePixel** and can be found on [HumblePixel's itch.io page](https://humblepixel.itch.io/).
+- **Fonts**:
+  - **Gallaecia Forte**: Created by **David Calviño**.
+  - **Thin Pixel**: Created by **StyleSeven**.
+
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
