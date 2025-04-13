@@ -1,7 +1,7 @@
 export enum DevilFruitType {
     ZOAN = 'ZOAN',
-    ANCIENT_ZOAN = 'ANCIENT ZOAN',
-    MYTHICAL_ZOAN = 'MYTHICAL ZOAN',
+    ANCIENT_ZOAN = 'ANCIENT_ZOAN',
+    MYTHICAL_ZOAN = 'MYTHICAL_ZOAN',
     PARAMECIA = 'PARAMECIA',
     LOGIA = 'LOGIA',
   }

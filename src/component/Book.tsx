@@ -7,10 +7,8 @@ import {
   appearContent,
 } from "../util/bookAnimator";
 import { Page } from "./Page";
-import { DevilFruit } from "../types/DevilFruit";
-import { DevilFruitType } from "../types/DevilFruitType";
+import { useDevilFruits } from "../hook/useDevilFruits";
 import book_close from "../assets/image/book_close.png";
-import gumGum from "../assets/image/gumGum.png";
 import "../style/style-book.css";
 import gsap from "gsap";
 
@@ -24,37 +22,25 @@ export const BookComponent = () => {
   const [isDebounce, setIsDebounce] = useState(false);
 
   const [pageIndex, setPageIndex] = useState(0);
-  const maxPageIndex = 84
+  const maxPageIndex = 40
 
-  const [currentDevilFruit] = useState<DevilFruit>({
-    id: 0,
-    originalName: "ゴムゴムの実",
-    romanizedName: "Gomu Gomu no Mi",
-    englishName: "Gum-Gum Fruit",
-    meaning: "Rubber Rubber Fruit",
-    type: DevilFruitType.PARAMECIA,
-    debutChapter: "Chapter 1",
-    debutEpisode: "Episode 1",
-    debutArc: "East blue",
-    currentHolder: "Monkey D. Luffy",
-    pastHolders: ["Monkey D. Luffy","Joy Boy"],
-    description: "The Gomu Gomu no Mi is a Paramecia-type Devil Fruit that grants the user a body made of rubber, allowing them to stretch and bounce.",
-    awakeningStatus: true,
-    awakeningDescription: "Upon awakening, the user gains the ability to fight with cartoonish freedom, bending the laws of physics and reality to their will.",
-    isCanon: true,
-    imageUrl: gumGum,
-  });
+  const { data: devilFruits } = useDevilFruits(pageIndex);
+
 
   function checkPageIndex() {
     return pageIndex;
   }
 
   function nextPage() {
-    setPageIndex((prevIndex) => prevIndex + 1);
+    setTimeout(() => {
+      setPageIndex((prevIndex) => Math.min(prevIndex + 1, maxPageIndex));
+    }, 400);
   }
 
   function previousPage() {
-    setPageIndex((prevIndex) => prevIndex - 1);
+    setTimeout(() => {
+      setPageIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    }, 400);
   }
 
   function checkDebounce() {
@@ -164,8 +150,8 @@ export const BookComponent = () => {
       <img className="book-ref" ref={bookRef} src={book_close} alt="book" />
 
       <div ref={bookContent} className="book-content-holder">
-        <Page side="left" pageIndex={pageIndex} devilFruit={currentDevilFruit} />
-        <Page side="right" pageIndex={pageIndex} devilFruit={currentDevilFruit} />
+      <Page side="left" devilFruit={devilFruits?.[0]} />
+      <Page side="right" devilFruit={devilFruits?.[1]} />
       </div>
 
       <img className="content-ref" ref={contentRef} src="" alt="content" />
